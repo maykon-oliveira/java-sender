@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="322.0" prefWidth="315.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.151" fx:controller="javasender.MainController">
+<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javasender.MainController">
     <children>
-        <Button fx:id="button" layoutX="261.0" layoutY="283.0" onAction="#handleEnviarMensagem" text="Enviar" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <TextField fx:id="DestinatarioTextFiled" layoutX="33.0" layoutY="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
-      <TextField fx:id="assuntoTextFiled" layoutX="10.0" layoutY="43.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="40.0" />
-      <TextArea fx:id="corpoMensagem" layoutX="14.0" layoutY="72.0" prefHeight="205.0" prefWidth="295.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+        <Button layoutX="261.0" layoutY="283.0" onAction="#handleEnviarMensagem" text="Enviar" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="assuntoTextFiled" layoutX="10.0" layoutY="35.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0" />
+      <TextField fx:id="DestinatarioTextFiled" layoutX="12.0" layoutY="94.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="94.0" />
+      <TextArea fx:id="corpoMensagem" layoutX="12.0" layoutY="126.0" prefHeight="205.0" prefWidth="295.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="8.0" />
+      <Label layoutX="14.0" layoutY="14.0" text="Assunto" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="68.0" text="Destinatario">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="23.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleAnexarArquivo" text="Anexar arquivo" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="nomeAnexoLabel" layoutX="111.0" layoutY="343.0" prefHeight="25.0" prefWidth="133.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
