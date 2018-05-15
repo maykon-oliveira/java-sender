@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
+import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
 
@@ -33,7 +34,7 @@ public class MailSender {
         String password = credenciasUsario.getProperty("hotmail.password");
         
         
-        Email email = new HtmlEmail();
+        HtmlEmail email = new HtmlEmail();
         email.setHostName("smtp.live.com");
         email.setSmtpPort(587);
         email.setStartTLSRequired(true);
@@ -41,10 +42,21 @@ public class MailSender {
         email.setFrom(credenciasUsario.getProperty("hotmail.email"));
         email.setSubject(assunto);
         email.setMsg(mensagem);
+        email.attach(anexo);
         email.addTo(destinatario);
         email.setDebug(true);
         email.send();
         
         System.out.println("Mensagem enviada");
-    }    
+    }
+    
+    private EmailAttachment makeAttachment(File anexo) {
+        if (anexo != null) {
+            EmailAttachment emailAnexo = new EmailAttachment();
+            emailAnexo.setPath(anexo.getPath());
+            emailAnexo.setDescription(EmailAttachment.ATTACHMENT);
+            return emailAnexo;
+        }
+        return null;
+    }
 }

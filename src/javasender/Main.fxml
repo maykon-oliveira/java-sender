@@ -4,30 +4,47 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javasender.MainController">
+<AnchorPane id="AnchorPane" prefHeight="454.0" prefWidth="343.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8.0.151" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javasender.MainController">
     <children>
-        <Button layoutX="261.0" layoutY="283.0" onAction="#handleEnviarMensagem" text="Enviar" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <TextField fx:id="assuntoTextFiled" layoutX="10.0" layoutY="35.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="35.0" />
-      <TextField fx:id="DestinatarioTextFiled" layoutX="12.0" layoutY="94.0" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="94.0" />
-      <TextArea fx:id="corpoMensagem" layoutX="12.0" layoutY="126.0" prefHeight="205.0" prefWidth="295.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="8.0" />
-      <Label layoutX="14.0" layoutY="14.0" text="Assunto" AnchorPane.topAnchor="10.0">
+      <ImageView fitHeight="514.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sources/40715671-doodle-send-mail-seamless-pattern-background.jpg" />
+         </image>
+      </ImageView>
+        <Button layoutX="222.0" layoutY="404.0" onAction="#handleEnviarMensagem" prefHeight="17.0" prefWidth="29.0" style="-fx-background-color: hidden;" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="60.0" />
+      <TextField fx:id="assuntoTextFiled" layoutX="87.0" layoutY="49.0" prefHeight="25.0" prefWidth="247.0" AnchorPane.leftAnchor="87.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="49.0" />
+      <TextField fx:id="DestinatarioTextFiled" layoutX="120.0" layoutY="85.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="85.0" />
+      <TextArea fx:id="corpoMensagem" layoutX="10.0" layoutY="130.0" prefHeight="239.0" prefWidth="324.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="7.0" layoutY="47.0" style="-fx-text-fill: white;" text="Assunto:" AnchorPane.topAnchor="47.0">
          <font>
-            <Font size="16.0" />
+            <Font name="Lucida Sans Unicode" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="68.0" text="Destinatario">
+      <Label layoutX="6.0" layoutY="88.0" style="-fx-text-fill: white;" text="Destinatario:" AnchorPane.topAnchor="88.0">
          <font>
-            <Font size="16.0" />
+            <Font name="Lucida Sans Regular" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="23.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleAnexarArquivo" text="Anexar arquivo" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
-      <Label fx:id="nomeAnexoLabel" layoutX="111.0" layoutY="343.0" prefHeight="25.0" prefWidth="133.0">
+      <Button layoutX="10.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleAnexarArquivo" prefHeight="47.0" prefWidth="61.0" style="-fx-background-color: hidden;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="10.0" />
+      <Label fx:id="nomeAnexoLabel" layoutX="57.0" layoutY="377.0" prefHeight="25.0" prefWidth="225.0" textFill="WHITE">
          <font>
-            <Font size="16.0" />
+            <Font size="18.0" />
          </font>
       </Label>
+      <ImageView fitHeight="36.0" fitWidth="58.0" layoutX="284.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="10.0">
+         <image>
+            <Image url="@sources/blue-mail-send-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="54.0" layoutX="18.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0">
+         <image>
+            <Image url="@sources/blue-mail-attach-icon.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
